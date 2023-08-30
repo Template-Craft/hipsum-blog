@@ -17,6 +17,8 @@ const plumber = require('gulp-plumber');
 const fileinclude = require('gulp-file-include'); // Для подключения файлов друг в друга
 const del = require('del');
 
+const beautify = require('gulp-beautify');
+
 const sass = gulpsass(dartsass);
 
 // Таск для компиляции SCSS в CSS
@@ -104,6 +106,12 @@ gulp.task('html', function (callback) {
       }),
     )
     .pipe(fileinclude({ prefix: '@@' }))
+    .pipe(
+      beautify.html({
+        indent_size: 2,
+        preserve_newlines: false,
+      }),
+    )
     .pipe(gulp.dest('./build/'))
     .pipe(browserSync.reload({ stream: true }));
   callback();
