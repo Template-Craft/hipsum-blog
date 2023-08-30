@@ -90,6 +90,14 @@ gulp.task('smart-grid', (cb) => {
   cb();
 });
 
+// gulp.task('data', function (callback) {
+//   return gulp
+//     .src('./src/data/*.json')
+//     .pipe(gulp.dest('./build/data/'))
+//     .pipe(browserSync.reload({ stream: true }));
+//   callback();
+// });
+
 // Таск для сборки HTML и шаблонов
 gulp.task('html', function (callback) {
   return gulp
@@ -105,7 +113,12 @@ gulp.task('html', function (callback) {
         }),
       }),
     )
-    .pipe(fileinclude({ prefix: '@@' }))
+    .pipe(
+      fileinclude({
+        prefix: '@@',
+        basepath: './src/html/',
+      }),
+    )
     .pipe(
       beautify.html({
         indent_size: 2,
@@ -148,6 +161,7 @@ gulp.task('copy:js', function (callback) {
 
 // Слежение за HTML и CSS и обновление браузера
 gulp.task('watch', function () {
+  watch('./src/html/data/*.json', gulp.parallel('html')).on('change', browserSync.reload);
   // Слежение за HTML и обновление браузера
   watch(['./src/*.html'], gulp.parallel(browserSync.reload));
 
@@ -184,4 +198,4 @@ gulp.task('clean:build', function () {
 
 // Дефолтный таск (задача по умолчанию)
 // Запускаем одновременно задачи server и watch
-gulp.task('default', gulp.series(gulp.parallel('clean:build'), gulp.parallel('scss', 'html', 'css-lib', 'copy:img', 'copy:fonts', 'copy:js'), gulp.parallel('server', 'watch')));
+gulp.task('default', gulp.series(gulp.parallel('clean:build'), gulp.parallel('html', 'scss', 'css-lib', 'copy:img', 'copy:fonts', 'copy:js'), gulp.parallel('server', 'watch')));

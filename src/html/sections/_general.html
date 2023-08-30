@@ -2,7 +2,13 @@
   <div class="container">
     <div class="row">
       <div class="post-content"></div>
-      <aside class="microblog-content">@@include('../components/_recent_posts.html')</aside>
+
+      <aside class="microblog-content">
+        <article class="recent-post">
+          <h3 class="recent-post__title">Recent posts</h3>
+          @@loop('components/_recent_posts.html', "../html/data/recentPosts.json")
+        </article>
+      </aside>
     </div>
   </div>
 </section>
