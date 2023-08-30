@@ -318,42 +318,36 @@ html {
   color: var(--timepublish-color);
 }
 
-.section-general .post-content {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.section-general .post-content__title {
+.section-general .post__title {
   font-size: 42px;
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
   text-align: center;
 }
 
-.section-general .post-content__info {
+.section-general .post__info {
   text-align: center;
   margin-top: 1.5625rem;
   margin-bottom: 2.5rem;
 }
 
-.section-general .post-content__timepublish {
+.section-general .post__timepublish {
   font-size: 0.875em;
   font-weight: 700;
   color: var(--timepublish-color);
 }
 
-.section-general .post-content__commentscount {
+.section-general .post__commentscount {
   font-size: 0.875em;
   font-weight: 700;
   color: var(--timepublish-color);
 }
 
-.section-general .post-content__content {
+.section-general .post__content {
   width: 100%;
 }
 
-.section-general .post-content__description {
+.section-general .post__description {
   margin-top: 40px;
   margin-bottom: 40px;
   font-size: 16px;
