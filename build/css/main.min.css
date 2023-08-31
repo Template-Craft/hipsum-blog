@@ -9,6 +9,8 @@
   --border-color: #dde2e7;
   --text-color: #1a1a1a;
   --timepublish-color: #b0b0b0;
+  --text-btn-color: #ffffff;
+  --background-btn-color: #375573;
 }
 
 body,
@@ -319,10 +321,11 @@ html {
 }
 
 .section-general .post__title {
-  font-size: 42px;
-  font-family: "Playfair Display", sans-serif;
+  font-size: 2.625em;
   font-weight: 400;
+  font-family: "Playfair Display", sans-serif;
   text-align: center;
+  color: var(--text-color);
 }
 
 .section-general .post__info {
@@ -347,12 +350,74 @@ html {
   width: 100%;
 }
 
+.section-general .post__image {
+  height: 22.5rem;
+}
+
 .section-general .post__description {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 16px;
-  line-height: 28px;
-  color: #1a1a1a;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.75em;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-color);
+}
+
+.section-general .post-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 2.5rem;
+  border-bottom: 0.0625rem solid var(--border-color);
+}
+
+.section-general .post-more__btn {
+  font-size: 0.75em;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.125rem 0rem 1.125rem 1.875rem;
+  border-radius: 0.375rem;
+  text-transform: uppercase;
+  color: var(--text-btn-color);
+  background-color: var(--background-btn-color);
+}
+
+.section-general .post-more__btn__arrow {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  padding-left: 0.625rem;
+  padding-right: 1.875rem;
+  color: var(--text-btn-color);
+}
+
+.section-general .post-more__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-general .post-more__socials__item {
+  padding-right: 1.25rem;
+}
+
+.section-general .post-more__socials__item:last-child {
+  padding-right: 0rem;
+}
+
+.section-general .post-more__socials__image {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 @media screen and (max-width: 75rem) {
