@@ -1,12 +1,74 @@
-.footer{
-	padding: rem(12) 0 rem(32);
-	background-color: $primary-black;
+// General rules
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: var(--footer-background-color);
+  // @include col; // Нужно ли здесь это правило?
+}
 
-	&-title{
-		@include font(em(14), 600);
-		padding: rem(22) 0 rem(12);
-		text-align: center;
-		color: $clr-white;
-	}
+.footer-content,
+.footer-socials {
+  @include col;
+  display: flex;
+}
 
+ // Footer content component style
+.footer-content {
+  @include size(9);
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: rem(60);
+    margin-bottom: rem(70);
+    width: 100%;
+  }
+
+  &__item {
+    width: 33%;
+    padding-bottom: rem(20);
+  }
+
+  &__link {
+    @include font(em(16), 500);
+    color: var(--footer-text-color);
+  }
+}
+
+ // Footer socials component style
+.footer-socials {
+  @include size(3);
+
+  &__list {
+    display: flex;
+    margin-top: rem(60);
+  }
+
+  &__item {
+    padding-right: rem(30);
+  }
+
+  &__image {
+    width: rem(22);
+    height: rem(22);
+  }
+  
+}
+
+ // Footer copyright component style
+.footer-copyright {
+  @include size(12);
+  background: var(--footer-copyright-background);
+  width: 100%;
+
+  &__text {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: rem(25);
+    margin-bottom: rem(25);
+    @include font(em(14), 500);
+    color: var(--footer-copyright-text);
+  }
 }

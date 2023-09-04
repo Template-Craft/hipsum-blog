@@ -17,6 +17,8 @@ const plumber = require('gulp-plumber');
 const fileinclude = require('gulp-file-include'); // Для подключения файлов друг в друга
 const del = require('del');
 
+const beautify = require('gulp-beautify');
+
 const sass = gulpsass(dartsass);
 
 // Таск для компиляции SCSS в CSS
@@ -88,6 +90,14 @@ gulp.task('smart-grid', (cb) => {
   cb();
 });
 
+// gulp.task('data', function (callback) {
+//   return gulp
+//     .src('./src/data/*.json')
+//     .pipe(gulp.dest('./build/data/'))
+//     .pipe(browserSync.reload({ stream: true }));
+//   callback();
+// });
+
 // Таск для сборки HTML и шаблонов
 gulp.task('html', function (callback) {
   return gulp
@@ -103,7 +113,18 @@ gulp.task('html', function (callback) {
         }),
       }),
     )
-    .pipe(fileinclude({ prefix: '@@' }))
+    .pipe(
+      fileinclude({
+        prefix: '@@',
+        basepath: './src/html/',
+      }),
+    )
+    .pipe(
+      beautify.html({
+        indent_size: 2,
+        preserve_newlines: false,
+      }),
+    )
     .pipe(gulp.dest('./build/'))
     .pipe(browserSync.reload({ stream: true }));
   callback();
@@ -140,6 +161,7 @@ gulp.task('copy:js', function (callback) {
 
 // Слежение за HTML и CSS и обновление браузера
 gulp.task('watch', function () {
+  watch('./src/html/data/*.json', gulp.parallel('html')).on('change', browserSync.reload);
   // Слежение за HTML и обновление браузера
   watch(['./src/*.html'], gulp.parallel(browserSync.reload));
 
@@ -176,4 +198,4 @@ gulp.task('clean:build', function () {
 
 // Дефолтный таск (задача по умолчанию)
 // Запускаем одновременно задачи server и watch
-gulp.task('default', gulp.series(gulp.parallel('clean:build'), gulp.parallel('scss', 'html', 'css-lib', 'copy:img', 'copy:fonts', 'copy:js'), gulp.parallel('server', 'watch')));
+gulp.task('default', gulp.series(gulp.parallel('clean:build'), gulp.parallel('html', 'scss', 'css-lib', 'copy:img', 'copy:fonts', 'copy:js'), gulp.parallel('server', 'watch')));
