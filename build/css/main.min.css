@@ -9,6 +9,12 @@
   --border-color: #dde2e7;
   --text-color: #1a1a1a;
   --timepublish-color: #b0b0b0;
+  --text-btn-color: #ffffff;
+  --background-btn-color: #375573;
+  --footer-background-color: #dde2e7;
+  --footer-text-color: #8e9399;
+  --footer-copyright-background: #e8ebee;
+  --footer-copyright-text: #b7babe;
 }
 
 body,
@@ -316,6 +322,195 @@ html {
   font-size: 0.75em;
   font-weight: 500;
   color: var(--timepublish-color);
+}
+
+.section-general .post__title {
+  font-size: 2.625em;
+  font-weight: 400;
+  font-family: "Playfair Display", sans-serif;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.section-general .post__info {
+  text-align: center;
+  margin-top: 1.5625rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-general .post__timepublish {
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--timepublish-color);
+}
+
+.section-general .post__commentscount {
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--timepublish-color);
+}
+
+.section-general .post__content {
+  width: 100%;
+}
+
+.section-general .post__image {
+  height: 22.5rem;
+}
+
+.section-general .post__description {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.75em;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-color);
+}
+
+.section-general .post-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 2.5rem;
+  border-bottom: 0.0625rem solid var(--border-color);
+}
+
+.section-general .post-more__btn {
+  font-size: 0.75em;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.125rem 0rem 1.125rem 1.875rem;
+  border-radius: 0.375rem;
+  text-transform: uppercase;
+  color: var(--text-btn-color);
+  background-color: var(--background-btn-color);
+}
+
+.section-general .post-more__btn__arrow {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  padding-left: 0.625rem;
+  padding-right: 1.875rem;
+  color: var(--text-btn-color);
+}
+
+.section-general .post-more__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-general .post-more__socials__item {
+  padding-right: 1.25rem;
+}
+
+.section-general .post-more__socials__item:last-child {
+  padding-right: 0rem;
+}
+
+.section-general .post-more__socials__image {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: var(--footer-background-color);
+}
+
+.footer-content,
+.footer-socials {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.9375rem;
+  margin-right: 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-content {
+  width: calc(75% - 1.875rem);
+}
+
+.footer-content__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 3.75rem;
+  margin-bottom: 4.375rem;
+  width: 100%;
+}
+
+.footer-content__item {
+  width: 33%;
+  padding-bottom: 1.25rem;
+}
+
+.footer-content__link {
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--footer-text-color);
+}
+
+.footer-socials {
+  width: calc(25% - 1.875rem);
+}
+
+.footer-socials__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3.75rem;
+}
+
+.footer-socials__item {
+  padding-right: 1.875rem;
+}
+
+.footer-socials__image {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.footer-copyright {
+  width: calc(100% - 1.875rem);
+  background: var(--footer-copyright-background);
+  width: 100%;
+}
+
+.footer-copyright__text {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-top: 1.5625rem;
+  margin-bottom: 1.5625rem;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--footer-copyright-text);
 }
 
 @media screen and (max-width: 75rem) {
