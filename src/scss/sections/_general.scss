@@ -89,6 +89,7 @@
     }
   }
 
+  // Posts component style
   .post {
 
       &__title {
@@ -126,7 +127,7 @@
 
       &__description {
         @include font(em(16), 400);
-        line-height: em(28); // em или rem?
+        line-height: em(28);
         margin-top: rem(40);
         margin-bottom: rem(40);
         color: var(--text-color);

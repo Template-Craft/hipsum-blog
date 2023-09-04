@@ -1,56 +1,48 @@
+// General rules
 .footer {
   display: flex;
   flex-direction: column;
-  background: var(--footer-background);
-  // @include col;
+  background: var(--footer-background-color);
+  // @include col; // Нужно ли здесь это правило?
 }
 
+.footer-content,
+.footer-socials {
+  @include col;
+  display: flex;
+}
+
+ // Footer content component style
 .footer-content {
-  @include col;
   @include size(9);
-  display: flex;
-}
-
-.footer-socials {
-  @include col;
-  @include size(3);
-  display: flex;
-}
-
-.footer-copyright {
-  @include size(12);
-  background: aqua;
-  width: 100%;
-}
-
-//  Footer list
-.footer-content__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 60px;
-  margin-bottom: 70px;
-  width: 100%;
-}
-
-.footer-content__item {
-  width: 33%;
-  padding-bottom: 20px;
-}
-
-.footer-content__link {
-  @include font(em(16), 500);
-  color: var(--footer-text-color);
-  font-weight: 500;
-  font-family: "Montserrat";
-}
-
-// Footer-socials
-.footer-socials {
 
   &__list {
     display: flex;
-    margin-top: 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: rem(60);
+    margin-bottom: rem(70);
+    width: 100%;
+  }
+
+  &__item {
+    width: 33%;
+    padding-bottom: rem(20);
+  }
+
+  &__link {
+    @include font(em(16), 500);
+    color: var(--footer-text-color);
+  }
+}
+
+ // Footer socials component style
+.footer-socials {
+  @include size(3);
+
+  &__list {
+    display: flex;
+    margin-top: rem(60);
   }
 
   &__item {
@@ -61,28 +53,22 @@
     width: rem(22);
     height: rem(22);
   }
+  
 }
 
+ // Footer copyright component style
 .footer-copyright {
-  background: #e8ebee;
-}
-.footer-copyright-text {
-  display: block;
-  text-align: center;
+  @include size(12);
+  background: var(--footer-copyright-background);
   width: 100%;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  font-size: 14px;
-  color: #b7babe;
+
+  &__text {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: rem(25);
+    margin-bottom: rem(25);
+    @include font(em(14), 500);
+    color: var(--footer-copyright-text);
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
