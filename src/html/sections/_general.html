@@ -1,7 +1,7 @@
 <section class="section-general">
   <div class="container">
     <div class="row">
-      <div class="post-content">@@include('components/_post_content.html')</div>
+      <div class="post-content">@@loop('components/_post_content.html', "../html/data/postData.json")</div>
       <div class="microblog-content">
         <article class="recent-post">
           <h3 class="recent-post__title">Recent posts</h3>
