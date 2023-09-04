@@ -1,3 +1,7 @@
+// import path from 'node:path';
+const path = require('node:path');
+// const __dirname = path.resolve();
+
 const gulp = require('gulp'); // Подключаем Gulp
 const browserSync = require('browser-sync').create();
 const watch = require('gulp-watch');
@@ -116,7 +120,7 @@ gulp.task('html', function (callback) {
     .pipe(
       fileinclude({
         prefix: '@@',
-        basepath: './src/html/',
+        basepath: path.resolve(__dirname, './src/html/'),
       }),
     )
     .pipe(
