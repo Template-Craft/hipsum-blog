@@ -5,7 +5,12 @@
       <div class="microblog-content">
         <article class="recent-post">
           <h3 class="recent-post__title">Recent posts</h3>
-          @@loop('components/_recent_posts.html', "../html/data/recentPosts.json")
+          @@loop('components/_micro_posts.html', "../html/data/recentPosts.json")
+        </article>
+
+        <article class="popular-post">
+          <h3 class="popular-post__title">Popular posts</h3>
+          @@loop('components/_micro_posts.html', "../html/data/popularPosts.json")
         </article>
       </div>
     </div>
