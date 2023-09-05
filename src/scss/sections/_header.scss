@@ -2,14 +2,14 @@
 .header {
   display: flex;
   flex-direction: row;
-  border: 1px solid #dde2e7;
+  border-bottom: 1px solid #dde2e7;
 }
 
 .social-media {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 60px;
+  // padding-left: 60px;
 
   &__image {
     width: rem(22);
@@ -29,9 +29,21 @@
     padding-top: 50px;
     padding-bottom: 55px;
     margin: auto;
+    flex-basis: content;
   }
 
   &__btn {
     display: flex;
   }
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  width: 70px;
+}
+
+.btn__subscribe {
+  display: flex;
+  width: 70px;
 }
