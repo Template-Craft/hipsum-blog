@@ -1,2 +1,37 @@
+// General rules
 .header {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #dde2e7;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 60px;
+
+  &__image {
+    width: rem(22);
+    height: rem(22);
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  @include col;
+  @include size(12);
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    margin: auto;
+  }
+
+  &__btn {
+    display: flex;
+  }
 }

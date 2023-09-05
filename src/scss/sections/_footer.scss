@@ -12,7 +12,7 @@
   display: flex;
 }
 
- // Footer content component style
+// Footer content component style
 .footer-content {
   @include size(9);
 
@@ -36,7 +36,7 @@
   }
 }
 
- // Footer socials component style
+// Footer socials component style
 .footer-socials {
   @include size(3);
 
@@ -53,10 +53,9 @@
     width: rem(22);
     height: rem(22);
   }
-  
 }
 
- // Footer copyright component style
+// Footer copyright component style
 .footer-copyright {
   @include size(12);
   background: var(--footer-copyright-background);
