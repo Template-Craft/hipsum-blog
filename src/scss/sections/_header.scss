@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   border-bottom: 1px solid #dde2e7;
 
-  &__left_side {
+  &__left-side {
     @include col;
     @include size(2);
   }
@@ -14,17 +14,40 @@
     @include size(8);
   }
 
-  &__right_side {
+  &__right-side {
     @include col;
     @include size(2);
   }
+}
+
+// Left side style
+.header__left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-media {
   display: flex;
   justify-content: center;
   align-items: center;
-  // padding-left: 60px;
+
+  &__item {
+    display: flex;
+    padding-right: rem(30);
+  }
+
+  &__item:last-child {
+    padding-right: rem(0);
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: rem(6);
+  }
 
   &__image {
     width: rem(22);
@@ -32,6 +55,7 @@
   }
 }
 
+// Header centered style
 .header-content {
   display: flex;
   align-items: center;
@@ -46,19 +70,37 @@
     margin: auto;
     flex-basis: content;
   }
+}
+
+.header-search {
+  display: flex;
 
   &__btn {
-    display: flex;
+    padding: 6px;
+    background: none;
+    border: none;
+  }
+
+  &__btn__image {
+    width: 25px;
+    height: 25px;
   }
 }
 
-.social-media {
+// Right side style
+.header__right-side {
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 70px;
-}
 
-.btn__subscribe {
-  display: flex;
-  width: 70px;
+  &__btn {
+    @include font(em(12), 500);
+    display: flex;
+    align-items: center;
+    padding: rem(15) rem(35) rem(15) rem(35);
+    border-radius: rem(19);
+    text-transform: uppercase;
+    color: var(--text-btn-color);
+    background-color: var(--background-btn-color);
+  }
 }

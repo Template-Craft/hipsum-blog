@@ -38,7 +38,10 @@
 
 // Footer socials component style
 .footer-socials {
-  @include size(3);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  // @include size(3);
 
   &__list {
     display: flex;
@@ -47,6 +50,13 @@
 
   &__item {
     padding-right: rem(30);
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
   }
 
   &__image {

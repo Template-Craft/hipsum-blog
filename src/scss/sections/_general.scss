@@ -18,6 +18,10 @@
   }
 
   // Recent posts component style
+  .recent-post {
+    padding-top: 60px;
+  }
+
   .recent-post,
   .popular-post {
     width: 100%;
@@ -90,10 +94,6 @@
 
       color: var(--timepublish-color);
     }
-  }
-
-  .recent-post {
-    padding-top: 60px;
   }
 
   // Posts component style
