@@ -1,8 +1,23 @@
 // General rules
 .header {
   display: flex;
-  flex-direction: row;
-  border: 1px solid #dde2e7;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #dde2e7;
+
+  &__left_side {
+    @include col;
+    @include size(2);
+  }
+
+  &__centered {
+    @include col;
+    @include size(8);
+  }
+
+  &__right_side {
+    @include col;
+    @include size(2);
+  }
 }
 
 .social-media {
