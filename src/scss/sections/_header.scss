@@ -27,34 +27,6 @@
   align-items: center;
 }
 
-.social-media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__item {
-    display: flex;
-    padding-right: rem(30);
-  }
-
-  &__item:last-child {
-    padding-right: rem(0);
-  }
-
-  &__link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: rem(6);
-  }
-
-  &__image {
-    width: rem(22);
-    height: rem(22);
-  }
-}
-
 // Header centered style
 .header-content {
   display: flex;

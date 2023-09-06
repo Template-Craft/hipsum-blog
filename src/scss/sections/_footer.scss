@@ -3,7 +3,10 @@
   display: flex;
   flex-direction: column;
   background: var(--footer-background-color);
-  // @include col; // Нужно ли здесь это правило?
+
+  .social-media {
+    margin-top: rem(60);
+  }
 }
 
 .footer-content,
