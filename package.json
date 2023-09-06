@@ -10,6 +10,8 @@
 	"author": "Ko2doo",
 	"license": "ISC",
 	"dependencies": {
+		"@fancyapps/ui": "^5.0.22",
+		"animate.css": "^3.7.2",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
 		"gulp": "^4.0.2",
@@ -22,7 +24,8 @@
 		"normalize.css": "^8.0.1",
 		"postcss": "^8.4.18",
 		"postcss-scss": "^4.0.5",
-		"sass": "^1.55.0"
+		"sass": "^1.55.0",
+		"wowjs": "^1.1.3"
 	},
 	"devDependencies": {
 		"gulp-beautify": "^3.0.0",

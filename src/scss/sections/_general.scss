@@ -4,6 +4,7 @@
   .post-content,
   .microblog-content {
     @include col;
+    @include size-lg(12);
 
     display: flex;
     flex-direction: column;
@@ -15,6 +16,10 @@
 
   .microblog-content {
     @include size(3);
+
+    .gallery {
+      margin-top: rem(60);
+    }
   }
 
   // Recent posts component style
@@ -44,6 +49,21 @@
       color: var(--text-color);
       border-radius: rem(4);
       border: rem(1) solid var(--border-color);
+    }
+
+    @include lg-block() {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .micro-post {
+      @include col;
+      @include size-lg(4);
+      @include size-md(6);
+      @include size-sm(12);
+
+      border-bottom: none;
     }
   }
 }

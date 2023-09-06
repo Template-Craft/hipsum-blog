@@ -7,16 +7,30 @@
   &__left-side {
     @include col;
     @include size(2);
+    @include size-xl(12);
+
+    @include xl-block() {
+      margin-top: rem(8);
+      margin-bottom: rem(8);
+      order: 1;
+    }
   }
 
   &__centered {
     @include col;
     @include size(8);
+    @include size-xl(12);
   }
 
   &__right-side {
     @include col;
     @include size(2);
+    @include size-xl(12);
+
+    @include xl-block() {
+      order: 1;
+      margin-bottom: rem(6);
+    }
   }
 }
 
@@ -41,6 +55,10 @@
     padding-bottom: 55px;
     margin: auto;
     flex-basis: content;
+
+    @include xl-block() {
+      padding: rem(12) 0;
+    }
   }
 }
 

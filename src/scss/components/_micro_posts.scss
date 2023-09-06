@@ -8,6 +8,10 @@
 
   border-bottom: rem(1) solid var(--border-color);
 
+  &:last-child {
+    border-bottom: inherit;
+  }
+
   &__image {
     width: rem(80);
     height: rem(80);
