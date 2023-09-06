@@ -1,0 +1,27 @@
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    margin-right: rem(30);
+
+    &:last-child {
+      margin-right: rem(0);
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: rem(6);
+  }
+
+  &__image {
+    width: rem(22);
+    height: rem(22);
+  }
+}

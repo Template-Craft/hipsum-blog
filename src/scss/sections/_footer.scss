@@ -3,16 +3,25 @@
   display: flex;
   flex-direction: column;
   background: var(--footer-background-color);
-  // @include col; // Нужно ли здесь это правило?
+
+  .social-media {
+    margin-top: rem(60);
+
+    @include lg-block() {
+      margin-top: 0;
+      margin-bottom: rem(12);
+    }
+  }
 }
 
 .footer-content,
 .footer-socials {
   @include col;
+  @include size-lg(12);
   display: flex;
 }
 
- // Footer content component style
+// Footer content component style
 .footer-content {
   @include size(9);
 
@@ -23,11 +32,24 @@
     margin-top: rem(60);
     margin-bottom: rem(70);
     width: 100%;
+
+    @include lg-block() {
+      margin-top: rem(16);
+      margin-bottom: rem(8);
+    }
   }
 
   &__item {
     width: 33%;
     padding-bottom: rem(20);
+
+    @include md-block() {
+      width: 44.44%;
+    }
+
+    @include sm-block() {
+      width: 100%;
+    }
   }
 
   &__link {
@@ -36,9 +58,12 @@
   }
 }
 
- // Footer socials component style
+// Footer socials component style
 .footer-socials {
-  @include size(3);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  // @include size(3);
 
   &__list {
     display: flex;
@@ -49,14 +74,20 @@
     padding-right: rem(30);
   }
 
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+  }
+
   &__image {
     width: rem(22);
     height: rem(22);
   }
-  
 }
 
- // Footer copyright component style
+// Footer copyright component style
 .footer-copyright {
   @include size(12);
   background: var(--footer-copyright-background);

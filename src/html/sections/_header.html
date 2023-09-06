@@ -1,4 +1,36 @@
 <header class="header">
-	<h1 class="header-title">This is header</h1>
+  <div class="header__left-side">@@loop('components/_social_media_widget.html', '../html/data/socialMedia.json')</div>
 
+  <div class="header__centered">
+    <div class="container">
+      <div class="row">
+        <div class="header-content">
+          <div class="header-content__logo">
+            <img
+              class="header-content__image"
+              src="img/logo-hipsum.webp"
+              alt="" />
+          </div>
+          <div class="header-search">
+            <button
+              class="header-search__btn wow jackInTheBox"
+              type="button">
+              <img
+                class="header-search__btn__image"
+                src="img/icons/ic-search.svg"
+                alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__right-side">
+    <a
+      class="header__right-side__btn"
+      href="#">
+      Subscribe
+    </a>
+  </div>
 </header>

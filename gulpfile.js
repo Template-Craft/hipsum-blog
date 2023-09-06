@@ -1,3 +1,7 @@
+// import path from 'node:path';
+const path = require('node:path');
+// const __dirname = path.resolve();
+
 const gulp = require('gulp'); // Подключаем Gulp
 const browserSync = require('browser-sync').create();
 const watch = require('gulp-watch');
@@ -116,7 +120,7 @@ gulp.task('html', function (callback) {
     .pipe(
       fileinclude({
         prefix: '@@',
-        basepath: './src/html/',
+        basepath: path.resolve(__dirname, './src/html/'),
       }),
     )
     .pipe(
@@ -133,7 +137,7 @@ gulp.task('html', function (callback) {
 // объединям все css библиотеки в одну
 gulp.task('css-lib', function () {
   return gulp
-    .src(['node_modules/normalize.css/normalize.css'])
+    .src(['node_modules/normalize.css/normalize.css', 'node_modules/@fancyapps/ui/dist/fancybox/fancybox.css', 'node_modules/animate.css/animate.css'])
     .pipe(concat('libs.css'))
     .pipe(cssnano()) // минификация
     .pipe(rename({ suffix: '.min' }))
@@ -155,7 +159,7 @@ gulp.task('copy:fonts', function (callback) {
 
 // Копирование Скриптов
 gulp.task('copy:js', function (callback) {
-  return gulp.src('./src/js/**/*.*').pipe(gulp.dest('./build/js/'));
+  return gulp.src(['./src/js/**/*.*', 'node_modules/wowjs/dist/wow.min.js']).pipe(gulp.dest('./build/js/'));
   callback();
 });
 

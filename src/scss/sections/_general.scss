@@ -1,7 +1,10 @@
 .section-general {
+  padding-bottom: rem(75);
+
   .post-content,
   .microblog-content {
     @include col;
+    @include size-lg(12);
 
     display: flex;
     flex-direction: column;
@@ -13,10 +16,19 @@
 
   .microblog-content {
     @include size(3);
+
+    .gallery {
+      margin-top: rem(60);
+    }
   }
 
   // Recent posts component style
   .recent-post {
+    padding-top: 60px;
+  }
+
+  .recent-post,
+  .popular-post {
     width: 100%;
 
     display: flex;
@@ -38,144 +50,20 @@
       border-radius: rem(4);
       border: rem(1) solid var(--border-color);
     }
-  }
 
-  .micro-post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding-top: rem(24);
-    padding-bottom: rem(35);
-
-    border-bottom: rem(1) solid var(--border-color);
-
-    &__image {
-      width: rem(80);
-      height: rem(80);
-      object-fit: cover;
-
-      border-radius: 50%;
-    }
-
-    &__description {
-      @include font(em(22), 400);
-
-      font-family: $font-playfairdisplay;
-      display: block;
-      text-align: center;
-
-      margin-top: rem(24);
-      margin-bottom: rem(14);
-
-      color: var(--text-color);
-    }
-
-    &__info {
+    @include lg-block() {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: row;
     }
 
-    &__timepublish {
-      @include font(em(12), 500);
+    .micro-post {
+      @include col;
+      @include size-lg(4);
+      @include size-md(6);
+      @include size-sm(12);
 
-      color: var(--timepublish-color);
-    }
-
-    &__commentscount {
-      @include font(em(12), 500);
-
-      color: var(--timepublish-color);
+      border-bottom: none;
     }
   }
-
-  // Posts component style
-  .post {
-
-      &__title {
-        @include font(em(42), 400);
-        font-family: $font-playfairdisplay;
-        text-align: center;
-        color: var(--text-color);
-      }
-
-      &__info {
-        text-align: center;
-        margin-top: rem(25);
-        margin-bottom: rem(40);
-      }
-
-      &__timepublish {
-        @include font(em(14), 700);
-
-        color: var(--timepublish-color);
-      }
-
-      &__commentscount {
-        @include font(em(14), 700);
-
-        color: var(--timepublish-color);
-      }
-
-      &__content {
-        width: 100%;
-      }
-
-      &__image {
-        height: rem(360);
-      }
-
-      &__description {
-        @include font(em(16), 400);
-        line-height: em(28);
-        margin-top: rem(40);
-        margin-bottom: rem(40);
-        color: var(--text-color);
-      }
-    }
-
-  .post-more {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: rem(40);
-    border-bottom: rem(1) solid var(--border-color);;
-      
-      &__btn {
-        @include font(em(12), 500);
-        display: flex;
-        align-items: center;
-        padding: rem(18) rem(0) rem(18) rem(30);
-        border-radius: rem(6);
-        text-transform: uppercase;
-        color: var(--text-btn-color);
-        background-color: var(--background-btn-color);
-    }
-
-      &__btn__arrow {
-        width: rem(15);
-        height: rem(15);
-        padding-left: rem(10);
-        padding-right: rem(30);
-        color: var(--text-btn-color);
-      }
-
-      &__socials {
-        display: flex;
-      }
-
-      &__socials__item {
-        padding-right: rem(20);
-      }
-
-      &__socials__item:last-child {
-        padding-right: rem(0);
-      }
-
-      &__socials__image {
-        width: rem(20);
-        height: rem(20);
-      }
-    
-    }
-  }
+}

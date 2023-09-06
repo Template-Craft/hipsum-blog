@@ -1,2 +1,96 @@
+// General rules
 .header {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #dde2e7;
+
+  &__left-side {
+    @include col;
+    @include size(2);
+    @include size-xl(12);
+
+    @include xl-block() {
+      margin-top: rem(8);
+      margin-bottom: rem(8);
+      order: 1;
+    }
+  }
+
+  &__centered {
+    @include col;
+    @include size(8);
+    @include size-xl(12);
+  }
+
+  &__right-side {
+    @include col;
+    @include size(2);
+    @include size-xl(12);
+
+    @include xl-block() {
+      order: 1;
+      margin-bottom: rem(6);
+    }
+  }
+}
+
+// Left side style
+.header__left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Header centered style
+.header-content {
+  display: flex;
+  align-items: center;
+  @include col;
+  @include size(12);
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    margin: auto;
+    flex-basis: content;
+
+    @include xl-block() {
+      padding: rem(12) 0;
+    }
+  }
+}
+
+.header-search {
+  display: flex;
+
+  &__btn {
+    padding: 6px;
+    background: none;
+    border: none;
+  }
+
+  &__btn__image {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+// Right side style
+.header__right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__btn {
+    @include font(em(12), 500);
+    display: flex;
+    align-items: center;
+    padding: rem(15) rem(35) rem(15) rem(35);
+    border-radius: rem(19);
+    text-transform: uppercase;
+    color: var(--text-btn-color);
+    background-color: var(--background-btn-color);
+  }
 }

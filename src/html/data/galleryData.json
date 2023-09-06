@@ -1,0 +1,62 @@
+[
+  {
+    "pathToPreview": "img/decor/gallery/inner/inner-gallery-item1.webp",
+    "captionNumber": "#1",
+    "pathToImage": "img/decor/gallery/gal-post-1.webp",
+    "imageAltDescription": "Изображение галереи"
+  },
+  {
+    "pathToPreview": "img/decor/gallery/inner/inner-gallery-item2.webp",
+    "captionNumber": "#2",
+    "pathToImage": "img/decor/gallery/gal-post-2.webp",
+    "imageAltDescription": "Изображение галереи"
+  },
+  {
+    "pathToPreview": "img/decor/gallery/inner/inner-gallery-item3.webp",
+    "captionNumber": "#3",
+    "pathToImage": "img/decor/gallery/gal-post-3.webp",
+    "imageAltDescription": "Изображение галереи"
+  },
+  {
+    "pathToPreview": "img/decor/gallery/inner/inner-gallery-item4.webp",
+    "captionNumber": "#4",
+    "pathToImage": "img/decor/gallery/gal-post-4.webp",
+    "imageAltDescription": "Изображение галереи"
+  },
+  {
+    "pathToPreview": "img/decor/gallery/inner/inner-gallery-item5.webp",
+    "captionNumber": "#5",
+    "pathToImage": "img/decor/gallery/gal-post-5.webp",
+    "imageAltDescription": "Изображение галереи"
+  },
+  {
+    "pathToPreview": "img/decor/gallery/inner/inner-gallery-item6.webp",
+    "captionNumber": "#6",
+    "pathToImage": "img/decor/gallery/gal-post-6.webp",
+    "imageAltDescription": "Изображение галереи"
+  },
+  {
+    "pathToPreview": "img/decor/gallery/inner/inner-gallery-item7.webp",
+    "captionNumber": "#7",
+    "pathToImage": "img/decor/gallery/gal-post-7.webp",
+    "imageAltDescription": "Изображение галереи"
+  },
+  {
+    "pathToPreview": "img/decor/gallery/inner/inner-gallery-item8.webp",
+    "captionNumber": "#8",
+    "pathToImage": "img/decor/gallery/gal-post-8.webp",
+    "imageAltDescription": "Изображение галереи"
+  },
+  {
+    "pathToPreview": "img/decor/gallery/inner/inner-gallery-item9.webp",
+    "captionNumber": "#9",
+    "pathToImage": "img/decor/gallery/gal-post-9.webp",
+    "imageAltDescription": "Изображение галереи"
+  },
+  {
+    "pathToPreview": "img/decor/gallery/inner/inner-gallery-item10.webp",
+    "captionNumber": "#10",
+    "pathToImage": "img/decor/gallery/gal-post-10.webp",
+    "imageAltDescription": "Изображение галереи"
+  }
+]
